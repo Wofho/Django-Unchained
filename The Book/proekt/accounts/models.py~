@@ -1,0 +1,9 @@
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
+
+class ListUserManager(BaseUserManager):
+
+    def create_user(self, email):
+        ListUser.objects.create(email=email)
+
+    def create_superuser(self, email, password):
+        self.create_user(email)
