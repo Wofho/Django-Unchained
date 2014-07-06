@@ -26,6 +26,8 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+DOMAIN = 'localhost'
+ALLOWED_HOSTS = [DOMAIN]
 
 # Application definition
 
@@ -40,7 +42,7 @@ INSTALLED_APPS = (
     'accounts',
 )
 
-AUTH_USER_MODEL = 'accounts.ListUser'
+AUTH_USER_MODEL = 'accounts.User'
 AUTHENTICATION_BACKENDS = (
     'accounts.authentication.PersonaAuthenticationBackend',
 )

@@ -1,5 +1,3 @@
-/*global $ */
-
 var initialize = function (navigator, user, token, urls) {
     $('#id_login').on('click', function () {
         navigator.id.request();
@@ -8,12 +6,12 @@ var initialize = function (navigator, user, token, urls) {
     navigator.id.watch({
         loggedInUser: user,
         onlogin: function (assertion) {
-	    var deferred = $.post(
-		urls.login,
-		{ assertion: assertion, csrfmiddlewaretoken: token }
-	    );
-	    deferred.done(function () { window.location.reload(); })
-	    deferred.fail(function () { navigator.id.logout(); });
+            $.post(
+                urls.login,
+                { assertion: assertion, csrfmiddlewaretoken: token }
+            )
+                .done(function () { window.location.reload(); })
+                .fail(function () { navigator.id.logout(); });
         },
         onlogout: function () {}
     });
