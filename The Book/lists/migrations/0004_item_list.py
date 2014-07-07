@@ -1,6 +1,4 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
+# encoding: utf8
 from django.db import models, migrations
 
 
@@ -14,7 +12,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='item',
             name='list',
-            field=models.ForeignKey(to='lists.List', default=None),
+            field=models.ForeignKey(to_field='id', to='lists.List', default=None),
             preserve_default=True,
         ),
     ]

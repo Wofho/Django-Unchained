@@ -51,4 +51,3 @@ class LoginTest(FunctionalTest):
         # The "logged out" status also persists after a refresh
         self.browser.refresh()
         self.wait_to_be_logged_out(email=TEST_EMAIL)
-

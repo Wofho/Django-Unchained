@@ -46,7 +46,7 @@ class AuthenticationTest(TestCase):
         self.assertEqual(found_user, actual_user)
 
     def test_creates_new_user_if_necessary_for_valid_assertion(
-            self,
+            self, 
             mock_post
     ):
         mock_post.return_value.json.return_value = {
