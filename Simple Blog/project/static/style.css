@@ -1,0 +1,17 @@
+body{
+        background-color: #CCCCFF;
+        color: #000000;
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+        line-height: 18px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+}
+div.content{
+        border: 2px solid #000000;
+        background-color: #FFCC99;
+        max-width: 640px;
+        width: 96%;
+        padding: 3%;
+        margin: 38px  auto;
+}
